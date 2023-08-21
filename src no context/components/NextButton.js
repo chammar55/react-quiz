@@ -1,7 +1,4 @@
-import { useQuiz } from "../contexts/QuizContext";
-
-function NextButton() {
-  const { dispatch, answer, index, numQuestions } = useQuiz();
+function NextButton({ dispatch, answer, index, numQuestions }) {
   if (answer === null) return null; // No answer no below code
   if (index < numQuestions - 1)
     // Stop to move to next question when it reach 15
